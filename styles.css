@@ -1,0 +1,23 @@
+:root {
+}
+
+head, body {
+    margin: 0px;
+}
+
+#main-content {
+    display: flex;
+}
+
+
+#library {
+    display: flex;
+    flex-direction: column;
+}
+
+#bookshelf {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
