@@ -30,3 +30,21 @@ function printLibrary(){
     }
 }
 
+
+
+
+addBookToLibrary("Lord of The Rings", "J.R.R. Tolkien", 354, "unread");
+addBookToLibrary("Franny and Zoey", "J.D. Salinger", 150, "read");
+addBookToLibrary("Catcher in the Rye", "J.D. Salinger", 304, "read");
+
+printLibrary();
+
+const gridContainer = document.getElementById('bookshelf');
+
+for(let i=0; i < myLibrary.length; i++){
+    const newGridItem = document.createElement('div');
+    newGridItem.classList.add('book');
+    newGridItem.textContent = myLibrary[i].title;
+    gridContainer.appendChild(newGridItem);
+};
+

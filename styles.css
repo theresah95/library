@@ -1,5 +1,5 @@
-:root {
-}
+/* :root {
+} */
 
 head, body {
     margin: 0px;
@@ -16,8 +16,11 @@ head, body {
 }
 
 #bookshelf {
+    height: 500px;
+    width: 500px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    border: 5px solid black;
 }
 
