@@ -9,9 +9,15 @@ head, body {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
+}
+
+.page-title {
+ justify-self: center;
 }
 
 a {
@@ -26,6 +32,11 @@ a:visited {
 
 /* Index Styles */
 
+#home-page-title {
+    grid-column: 1 / -1;
+}
+
+
 #main-content {
     display: flex;
     flex-direction: column;
@@ -39,7 +50,7 @@ a:visited {
     border: 5px solid lightgrey;
 }
 
-#add-new-book:hover, #submit-button:hover {
+#add-new-book:hover, #submit-button:hover, #back-button:hover {
     box-shadow: 2px 2px 2px 2px grey;
 }
 
@@ -74,6 +85,15 @@ a:visited {
 }
 
 /* Add New Book page styles */
+
+#back-button {
+    background-color: lightgrey;
+    border-radius: var(--primary-border-radius);
+    border: 5px solid lightgrey;
+    height: 50%;
+    width: 50%;
+    justify-self: center;
+}
 
 #new-book-form {
     display: grid;
