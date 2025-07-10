@@ -1,6 +1,7 @@
  :root {
 
     --primary-border-radius: 10px;
+    --button-color: lightgrey; 
 }
 
 head, body {
@@ -13,6 +14,16 @@ header {
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
 /* Index Styles */
 
 #main-content {
@@ -21,6 +32,17 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+#add-new-book {
+     background-color: lightgrey;
+    border-radius: var(--primary-border-radius);
+    border: 5px solid lightgrey;
+}
+
+#add-new-book:hover, #submit-button:hover {
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
 
 
 #library {
@@ -73,6 +95,7 @@ header {
     align-self: center;
     border-radius: var(--primary-border-radius);
     border: 1px solid lightgrey; 
+    box-shadow: 1px 1px lightgrey;
 }
 
 #submit-button {
