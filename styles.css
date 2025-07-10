@@ -11,6 +11,8 @@ header {
     justify-content: center;
 }
 
+/* Index Styles */
+
 #main-content {
     display: flex;
     flex-direction: column;
@@ -46,4 +48,9 @@ header {
     justify-content: center;
     text-align: center;
 }
+
+/* Add New Book page styles */
+
+
+
 
