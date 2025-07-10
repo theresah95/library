@@ -93,6 +93,8 @@ a:visited {
     height: 50%;
     width: 50%;
     justify-self: center;
+    margin-left: 30px;
+    
 }
 
 #new-book-form {
