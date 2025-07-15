@@ -39,7 +39,22 @@ addBookToLibrary("Catcher in the Rye", "J.D. Salinger", 304, "read");
 
 
 
-printLibrary();
+//printLibrary();
+
+const submit = document.querySelector("#submit-button");
+submit.addEventListener("click", submitAction);
+
+function submitAction(event){
+    let title, author, numPages, status; 
+    title = document.getElementById("title").value;
+    author = document.getElementById("author").value;
+    numPages = document.getElementById("num-pages").value;
+    status = document.getElementById("status").value;
+    addBookToLibrary(title, author, numPages, status);
+    printLibrary();
+    event.preventDefault();
+};
+
 
 const gridContainer = document.getElementById('bookshelf');
 
