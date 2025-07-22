@@ -30,31 +30,9 @@ function printLibrary(){
     }
 }
 
-
-
-
 addBookToLibrary("Lord of The Rings", "J.R.R. Tolkien", 354, "unread");
 addBookToLibrary("Franny and Zoey", "J.D. Salinger", 150, "read");
 addBookToLibrary("Catcher in the Rye", "J.D. Salinger", 304, "read");
-
-
-
-//printLibrary();
-
-const submit = document.querySelector("#submit-button");
-submit.addEventListener("click", submitAction);
-
-function submitAction(event){
-    let title, author, numPages, status; 
-    title = document.getElementById("title").value;
-    author = document.getElementById("author").value;
-    numPages = document.getElementById("num-pages").value;
-    status = document.getElementById("status").value;
-    addBookToLibrary(title, author, numPages, status);
-    printLibrary();
-    event.preventDefault();
-};
-
 
 const gridContainer = document.getElementById('bookshelf');
 
@@ -64,4 +42,19 @@ for(let i=0; i < myLibrary.length; i++){
     newGridItem.textContent = myLibrary[i].title;
     gridContainer.appendChild(newGridItem);
 };
+
+//printLibrary();
+
+// const submit = document.querySelector("#submit-button");
+// submit.addEventListener("click", submitAction);
+
+// function submitAction(event){
+//     let title, author, numPages, status; 
+//     title = document.getElementById("title").value;
+//     author = document.getElementById("author").value;
+//     numPages = document.getElementById("num-pages").value;
+//     status = document.getElementById("status").value;
+//     event.preventDefault();
+// };
+
 
