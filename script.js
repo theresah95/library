@@ -9,8 +9,8 @@ function Book(title, author, numPages, status) {
     this.title = title; 
     this.author = author;
     this.numPages = numPages;
-    this.status = status
-    this.id = crypto.randomUUID;
+    this.status = status.toLowerCase();
+    this.id = crypto.randomUUID();
 
     this.printBookInfo = function() { 
         console.log(`${this.title}\n${this.author}\n${this.numPages}\n${this.status}\n${this.id}`);
@@ -18,8 +18,6 @@ function Book(title, author, numPages, status) {
 }
 //Function to add books to library
 function addBookToLibrary(title, author, numPages, status){
-    //generate a unique id for the book
-    let id = crypto.randomUUID();
     let book = new Book(title, author, numPages, status);
     myLibrary.push(book);
 }
@@ -56,10 +54,10 @@ function submitAction(event){
     author = document.getElementById("author").value;
     numPages = document.getElementById("num-pages").value;
     status = document.getElementById("status").value;
-    // console.log(`Title: ${title}, Author: ${Author}, No. of Pages: ${numPages}, Status: ${status}`);
+
     const newBook = addBookToLibrary(title, author, numPages, status);
-    
-    printLibrary();
+    myLibrary.at(-1).printBookInfo();   
+    // printLibrary();
 
     const newGridItem = document.createElement('div');
     newGridItem.classList.add('book');
