@@ -42,6 +42,12 @@ for(let i=0; i < myLibrary.length; i++){
     newGridItem.classList.add('book');
     newGridItem.textContent = myLibrary[i].title;
     gridContainer.appendChild(newGridItem);
+
+    const newToggle = document.createElement('input');
+    newToggle.setAttribute('type', 'checkbox');
+    newToggle.setAttribute('id', 'status-toggle');
+
+    newGridItem.appendChild(newToggle);
 };
 
 /* Submit Button Functionality */
@@ -69,12 +75,13 @@ function submitAction(event){
     newBookItem.classList.add('book');
     newBookItem.textContent = myLibrary.at(-1).title;
 
-    // const newToggle = document.createElement('input');
-    // newToggle.setAttribute = ('type', 'checkbox');
-    // newToggle.setAttribute = ('id', 'status-toggle');
+    const newToggle = document.createElement('input');
+    newToggle.setAttribute = ('type', 'checkbox');
+    newToggle.setAttribute = ('id', 'status-toggle');
 
+    newBookItem.appendChild(newToggle);
     gridContainer.appendChild(newBookItem);
-    // gridContainer.appendChild(newToggle);
+    
 
     //Resets input to empty so that you can add another book
     document.getElementById('form').reset();
