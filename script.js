@@ -69,9 +69,9 @@ function submitAction(event){
     newBookItem.classList.add('book');
     newBookItem.textContent = myLibrary.at(-1).title;
 
-    // const newToggle = document.createElement('input');
-    // newToggle.setAttribute = ('type', 'checkbox');
-    // newToggle.id.add = 'status-toggle';
+    const newToggle = document.createElement('input');
+    newToggle.setAttribute = ('type', 'checkbox');
+    newToggle.setAttribute = ('id', 'status-toggle');
 
     gridContainer.appendChild(newBookItem);
     // gridContainer.appendChild(newToggle);
