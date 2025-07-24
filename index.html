@@ -13,7 +13,7 @@
     </header>
     <div id="new-book-form">
         <h2>Add a New Book</h2>
-        <div id="form">
+        <form id="form">
             
             <h4 class="form-heading">Title</h4>
             <input class="book-info-input" id="title" type="text">
@@ -25,8 +25,12 @@
             <input class="book-info-input" id="num-pages" type="text">
                 
             <h4 class="form-heading">Status</h4>
-            <input class="book-info-input" id="status" type="text">
-        </div>
+            <!-- <input class="book-info-input" id="status" type="text"> -->
+             <select class="book-info-input" id="status">
+                <option value="read">Read</option>
+                <option value="unread">Unread</option>
+             </select>
+        </form>
         <input id="submit-button" type="submit" value="Submit"> 
     </div>
     <div id="library-section">

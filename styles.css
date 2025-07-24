@@ -82,10 +82,9 @@ a:visited {
 .book {
     display: flex;
     flex-direction: column;
-
-    height: 100%;
-    width: 100%;
     text-align: left;
+    height: 200px;
+    min-width: 200px;
 }
 
 /* Add New Book */
