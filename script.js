@@ -24,6 +24,7 @@ function addBookToLibrary(title, author, numPages, status){
     myLibrary.push(book);
 }
 
+/* Print Library Function */
 function printLibrary(){
     for (let i=0; i < myLibrary.length; i++){
         console.log(myLibrary[i].title);
@@ -43,18 +44,27 @@ for(let i=0; i < myLibrary.length; i++){
     gridContainer.appendChild(newGridItem);
 };
 
-//printLibrary();
+/* Submit Button Functionality */
 
-// const submit = document.querySelector("#submit-button");
-// submit.addEventListener("click", submitAction);
+const submit = document.querySelector("#submit-button");
+submit.addEventListener("click", submitAction);
 
-// function submitAction(event){
-//     let title, author, numPages, status; 
-//     title = document.getElementById("title").value;
-//     author = document.getElementById("author").value;
-//     numPages = document.getElementById("num-pages").value;
-//     status = document.getElementById("status").value;
-//     event.preventDefault();
-// };
+function submitAction(event){
+    event.preventDefault();
+    let title, author, numPages, status; 
+    title = document.getElementById("title").value;
+    author = document.getElementById("author").value;
+    numPages = document.getElementById("num-pages").value;
+    status = document.getElementById("status").value;
+    // console.log(`Title: ${title}, Author: ${Author}, No. of Pages: ${numPages}, Status: ${status}`);
+    const newBook = addBookToLibrary(title, author, numPages, status);
+    
+    printLibrary();
+
+    const newGridItem = document.createElement('div');
+    newGridItem.classList.add('book');
+    newGridItem.textContent = myLibrary.at(-1).title;
+    gridContainer.appendChild(newGridItem);
+};
 
 
