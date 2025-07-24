@@ -66,9 +66,15 @@ function submitAction(event){
 
     //Adds new book from back of the myLibrary array to the grid 
     const newBookItem = document.createElement('div');
-    newGridItem.classList.add('book');
-    newGridItem.textContent = myLibrary.at(-1).title;
+    newBookItem.classList.add('book');
+    newBookItem.textContent = myLibrary.at(-1).title;
+
+    // const newToggle = document.createElement('input');
+    // newToggle.setAttribute = ('type', 'checkbox');
+    // newToggle.id.add = 'status-toggle';
+
     gridContainer.appendChild(newBookItem);
+    // gridContainer.appendChild(newToggle);
 
     //Resets input to empty so that you can add another book
     document.getElementById('form').reset();
