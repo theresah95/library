@@ -90,6 +90,7 @@ a:visited {
     min-width: 200px;
     background-color: green;
     padding: 10px;
+    font-size: 1.2em;
 }
 
 /* Add New Book */
