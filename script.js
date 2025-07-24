@@ -29,10 +29,12 @@ function printLibrary(){
     }
 }
 
+/* Filler Books */
 addBookToLibrary("Lord of The Rings", "J.R.R. Tolkien", 354, "unread");
 addBookToLibrary("Franny and Zoey", "J.D. Salinger", 150, "read");
 addBookToLibrary("Catcher in the Rye", "J.D. Salinger", 304, "read");
 
+/* Bookshelf Grid Container Creation */ 
 const gridContainer = document.getElementById('bookshelf');
 
 for(let i=0; i < myLibrary.length; i++){
@@ -57,14 +59,17 @@ function submitAction(event){
     numPages = document.getElementById("num-pages").value;
     status = document.getElementById("status").value;
     addBookToLibrary(title, author, numPages, status);
+    
     //To test and ensure the correct values are being added to the array 
-    // myLibrary.at(-1).printBookInfo();   
+    //myLibrary.at(-1).printBookInfo();   
     // printLibrary();
+
     //Adds new book from back of the myLibrary array to the grid 
     const newGridItem = document.createElement('div');
     newGridItem.classList.add('book');
     newGridItem.textContent = myLibrary.at(-1).title;
     gridContainer.appendChild(newGridItem);
+
     //Resets input to empty so that you can add another book
     document.getElementById('form').reset();
 };
