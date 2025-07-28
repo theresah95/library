@@ -74,7 +74,7 @@ function submitAction(event){
     const newBookItem = document.createElement('div');
     newBookItem.classList.add('book');
     newBookItem.textContent = myLibrary.at(-1).title;
-
+    //Adds status toggle to book element
     const newToggle = document.createElement('input');
     newToggle.setAttribute = ('type', 'checkbox');
     newToggle.setAttribute = ('id', 'status-toggle');
