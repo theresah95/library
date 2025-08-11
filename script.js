@@ -35,19 +35,19 @@ addBookToLibrary("Franny and Zoey", "J.D. Salinger", 150, "read");
 addBookToLibrary("Catcher in the Rye", "J.D. Salinger", 304, "read");
 
 /* Bookshelf Grid Container Creation */ 
-const gridContainer = document.getElementById('bookshelf');
+const bookShelf = document.getElementById('bookshelf');
 
 for(let i=0; i < myLibrary.length; i++){
-    const newGridItem = document.createElement('div');
-    newGridItem.classList.add('book');
-    newGridItem.textContent = myLibrary[i].title;
-    gridContainer.appendChild(newGridItem);
+    const newBookCard = document.createElement('div');
+    newBookCard.classList.add('book');
+    newBookCard.textContent = myLibrary[i].title;
+    bookShelf.appendChild(newBookCard);
 
-    const newToggle = document.createElement('input');
-    newToggle.setAttribute('type', 'checkbox');
-    newToggle.setAttribute('id', 'status-toggle');
+    const newCheckbox = document.createElement('input');
+    newCheckbox.setAttribute('type', 'checkbox');
+    newCheckbox.setAttribute('class', 'status-toggle');
 
-    newGridItem.appendChild(newToggle);
+    newBookCard.appendChild(newCheckbox);
 };
 
 /* Submit Button Functionality */
@@ -71,21 +71,30 @@ function submitAction(event){
     // printLibrary();
 
     //Adds new book from back of the myLibrary array to the grid 
-    const newBookItem = document.createElement('div');
-    newBookItem.classList.add('book');
-    newBookItem.textContent = myLibrary.at(-1).title;
+    const newBookCard = document.createElement('div');
+    newBookCard.classList.add('book');
+    newBookCard.textContent = myLibrary.at(-1).title;
     //Adds status toggle to book element
-    const newToggle = document.createElement('input');
-    newToggle.setAttribute = ('type', 'checkbox');
-    newToggle.setAttribute = ('id', 'status-toggle');
+    const newCheckbox = document.createElement('input');
+    newCheckbox.setAttribute('type', 'checkbox');
+    newCheckbox.setAttribute('class', 'status-toggle');    
+    // //Add Label to Checkbox
+    // const newLabel = document.createElement('label');
+    // newLabel.textContent = 'Read/Unread Status';
+    // newLabel.setAttribute('for', 'status-toggle');
 
-    newBookItem.appendChild(newToggle);
-    gridContainer.appendChild(newBookItem);
+
+    
+    // newBookCard.appendChild(newLabel);
+    newBookCard.appendChild(newCheckbox);
+    bookShelf.appendChild(newBookCard);
     
 
     //Resets input to empty so that you can add another book
     document.getElementById('form').reset();
 };
+
+//Toggle Read/Unread
 
 
 
