@@ -18,6 +18,11 @@ function Book(title, author, numPages, status) {
     
 
     this.updateStatus = function() {
+        if(this.status == 'read') {
+            document.getElementsByClassName('status-toggle').checked = true;
+        } else {
+            document.getElementsByClassName('status-toggle').checked = false;
+        }
     };
 }
 //Function to add books to library
