@@ -15,6 +15,10 @@ function Book(title, author, numPages, status) {
     this.printBookInfo = function() { 
         console.log(`${this.title}\n${this.author}\n${this.numPages}\n${this.status}\n${this.id}`);
     };
+    
+
+    this.updateStatus = function() {
+    };
 }
 //Function to add books to library
 function addBookToLibrary(title, author, numPages, status){
@@ -74,16 +78,13 @@ function submitAction(event){
     const newBookCard = document.createElement('div');
     newBookCard.classList.add('book');
     newBookCard.textContent = myLibrary.at(-1).title;
+    newBookCard.setAttribute('data-id', newBookCard.id);
     //Adds status toggle to book element
     const newCheckbox = document.createElement('input');
     newCheckbox.setAttribute('type', 'checkbox');
-    newCheckbox.setAttribute('class', 'status-toggle');    
-    // //Add Label to Checkbox
-    // const newLabel = document.createElement('label');
-    // newLabel.textContent = 'Read/Unread Status';
-    // newLabel.setAttribute('for', 'status-toggle');
+    newCheckbox.setAttribute('class', 'status-toggle');
 
-
+    
     
     // newBookCard.appendChild(newLabel);
     newBookCard.appendChild(newCheckbox);
@@ -95,6 +96,3 @@ function submitAction(event){
 };
 
 //Toggle Read/Unread
-
-
-
