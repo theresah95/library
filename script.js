@@ -84,7 +84,9 @@ function submitAction(event){
     newCheckbox.setAttribute('type', 'checkbox');
     newCheckbox.setAttribute('class', 'status-toggle');
 
-    
+    //Adds delete button
+    const deleteButton = document.createElement('img');
+    deleteButton.src ='';
     
     // newBookCard.appendChild(newLabel);
     newBookCard.appendChild(newCheckbox);
