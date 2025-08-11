@@ -92,8 +92,9 @@ a:visited {
     text-align: left;
     height: 200px;
     min-width: 200px; */
-    display: flex; 
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     background-color: green;
     padding: 10px;
     font-size: 2em;
@@ -106,9 +107,26 @@ a:visited {
 
 }
 
+.book > #text {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
 .status-toggle {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
     height: 20px;
     width: 20px;
+    justify-self: end;
+   
+}
+
+#delete-button {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    height: 30px;
+    justify-self: end;
+
 }
 
 /* Add New Book */

@@ -86,10 +86,12 @@ function submitAction(event){
 
     //Adds delete button
     const deleteButton = document.createElement('img');
-    deleteButton.src ='';
+    deleteButton.src ='trash-can-outline.svg';
+    deleteButton.setAttribute('id', 'delete-button');
     
     // newBookCard.appendChild(newLabel);
     newBookCard.appendChild(newCheckbox);
+    newBookCard.appendChild(deleteButton);
     bookShelf.appendChild(newBookCard);
     
 
