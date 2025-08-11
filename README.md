@@ -1,7 +1,7 @@
 # Library
 
-##Status
+## Status
 In Progress
 
-##Technologies Used
+## Technologies Used
 HTML, Javascript, and CSS, Google Chrome Developer Tools, VS Code
