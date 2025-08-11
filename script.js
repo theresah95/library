@@ -52,6 +52,12 @@ for(let i=0; i < myLibrary.length; i++){
     newCheckbox.setAttribute('class', 'status-toggle');
 
     newBookCard.appendChild(newCheckbox);
+
+    //Adds delete button
+    const deleteButton = document.createElement('img');
+    deleteButton.src ='trash-can-outline.svg';
+    deleteButton.setAttribute('id', 'delete-button');
+    newBookCard.appendChild(deleteButton);
 };
 
 /* Submit Button Functionality */
