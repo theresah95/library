@@ -16,13 +16,8 @@ function Book(title, author, numPages, status) {
         console.log(`${this.title}\n${this.author}\n${this.numPages}\n${this.status}\n${this.id}`);
     };
 
-    this.updateStatus = function() {
-        // if(this.status == 'read') {
-        //     document.querySelector('.status-toggle').checked = true;
-        // } else if (this.status == 'unread') {
-        //     document.querySelector('.status-toggle').checked = false;
-        // }
-    };
+    // this.updateStatus = function() {     
+    // };
 }
 //Function to add books to library
 function addBookToLibrary(title, author, numPages, status){
@@ -124,7 +119,4 @@ function submitAction(event){
     document.getElementById('form').reset();
 };
 
-// //Toggle Read/Unread
-// for(i=0; i < myLibrary.length; i++){
-//     myLibrary[i].updateStatus();
-// }
+
