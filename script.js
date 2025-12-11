@@ -15,14 +15,13 @@ function Book(title, author, numPages, status) {
     this.printBookInfo = function() { 
         console.log(`${this.title}\n${this.author}\n${this.numPages}\n${this.status}\n${this.id}`);
     };
-    
 
     this.updateStatus = function() {
-        if(this.status == 'read') {
-            document.getElementsByClassName('status-toggle').checked = true;
-        } else {
-            document.getElementsByClassName('status-toggle').checked = false;
-        }
+        // if(this.status == 'read') {
+        //     document.querySelector('.status-toggle').checked = true;
+        // } else if (this.status == 'unread') {
+        //     document.querySelector('.status-toggle').checked = false;
+        // }
     };
 }
 //Function to add books to library
@@ -55,6 +54,13 @@ for(let i=0; i < myLibrary.length; i++){
     const newCheckbox = document.createElement('input');
     newCheckbox.setAttribute('type', 'checkbox');
     newCheckbox.setAttribute('class', 'status-toggle');
+    
+    //If read, checkbox will be checked; if not, it will remain unchecked
+    if(myLibrary[i].status == "read") {
+        newCheckbox.checked = true;
+    } else {
+        newCheckbox.checked = false;
+    }
 
     newBookCard.appendChild(newCheckbox);
 
@@ -85,21 +91,29 @@ function submitAction(event){
     //myLibrary.at(-1).printBookInfo();   
     // printLibrary();
 
+     //Adds status toggle to book element
+    const newCheckbox = document.createElement('input');
+    newCheckbox.setAttribute('type', 'checkbox');
+    newCheckbox.setAttribute('class', 'status-toggle');
+
+    //If status is read, checkbox will be checked otherwise it will be unchecked
+    if(status == "read") {
+        newCheckbox.checked = true;
+    } else {
+        newCheckbox.checked = false;
+    }
+
     //Adds new book from back of the myLibrary array to the grid 
     const newBookCard = document.createElement('div');
     newBookCard.classList.add('book');
     newBookCard.textContent = myLibrary.at(-1).title;
     newBookCard.setAttribute('data-id', newBookCard.id);
-    //Adds status toggle to book element
-    const newCheckbox = document.createElement('input');
-    newCheckbox.setAttribute('type', 'checkbox');
-    newCheckbox.setAttribute('class', 'status-toggle');
 
     //Adds delete button
     const deleteButton = document.createElement('img');
     deleteButton.src ='trash-can-outline.svg';
     deleteButton.setAttribute('id', 'delete-button');
-    
+
     // newBookCard.appendChild(newLabel);
     newBookCard.appendChild(newCheckbox);
     newBookCard.appendChild(deleteButton);
@@ -110,4 +124,7 @@ function submitAction(event){
     document.getElementById('form').reset();
 };
 
-//Toggle Read/Unread
+// //Toggle Read/Unread
+// for(i=0; i < myLibrary.length; i++){
+//     myLibrary[i].updateStatus();
+// }
